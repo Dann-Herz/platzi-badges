@@ -1,0 +1,46 @@
+.background {
+    background-color: #1b1b25;
+    display: grid;
+    grid-template-columns: 10% 23% 60%;
+    grid-template-rows: 100% ;
+}
+
+.background-size {
+    width: 98vw;
+}
+
+.background-message {
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-direction: column;
+}
+
+.background-message__Logo {
+    height: 25vh;
+    margin-top: 20vh;
+}
+
+.background-message button {
+    margin-bottom: 50vh;
+}
+
+.background-message p {
+    color: white;
+    margin-bottom: 5vh;
+    font-size: 3vh;
+}
+
+.background-message h1 {
+    color: white;
+    font-size: 6vh;
+    margin-top: 2vh;
+}
+.size {
+    margin-top: 15vh;
+    margin-left: 15vw;
+    height: 55vh;
+
+}
+
+

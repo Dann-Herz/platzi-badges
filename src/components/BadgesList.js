@@ -10,7 +10,7 @@ class BadgesList extends React.Component {
                 return (
                     <li className="container__list-styled" key={badge.id}>
                         <img className="container__list-styled__img" src={badge.avatarUrl} alt="" />
-                        <li>
+                        <div>
                             <div className="bold">
                                 {badge.firstName} {badge.lastName}
                             </div>
@@ -22,7 +22,7 @@ class BadgesList extends React.Component {
                             <div>
                                 {badge.jobTitle} 
                             </div>
-                        </li>
+                        </div>
                     </li>
                 )
             })}

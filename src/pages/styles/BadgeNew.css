@@ -6,3 +6,15 @@
     margin-bottom: 1rem;
     color: #ffffff;
   }
+
+.Container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.row {
+  min-width: 350px;
+  width: 60%;
+}
+

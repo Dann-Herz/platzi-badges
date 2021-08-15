@@ -3,7 +3,6 @@ import React from 'react';
 import ella from '../images/so.png'
 import './styles/BadgeNew.css'
 import header from '../images/badge-header.svg'
-import Navbar from '../components/Navbar';
 import BadgeForm from '../components/BadgeForm.js'
 import Badge from '../components/Badge'
 
@@ -27,12 +26,11 @@ class BadgeNew extends React.Component{
     }
     render() {
         return (
-            <div>
-                <Navbar />
+            <React.Fragment>
                 <div className="BadgeNew__hero">
                     <img className="img-fluid" src={header} alt=""></img>
                 </div>
-                <div className="container">
+                <div className="Container">
                     <div className="row">
                         <div className="col-6">
                             <Badge 
@@ -50,7 +48,7 @@ class BadgeNew extends React.Component{
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         )
     }
 };

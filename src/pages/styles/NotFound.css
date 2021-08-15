@@ -1,0 +1,40 @@
+.background2 {
+    background-color: #1b1b25;
+    display: grid;
+    grid-template-columns: 10% 50% 40%;
+    grid-template-rows: 100% ;
+}
+
+.background-size2 {
+    width: 98vw;
+
+
+}
+
+.background-message2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.background-message2 h1 {
+    color: white;
+    font-size: 10vh;
+    margin-top: 30vh;
+}
+
+.background-message2 p {
+    color: white;
+    margin-bottom: 5vh;
+    font-size: 4vh;
+}
+
+
+.size2 {
+    height: 90vh;
+
+
+
+}
