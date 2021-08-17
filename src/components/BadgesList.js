@@ -1,9 +1,21 @@
 import React from 'react';
-import '../pages/styles/BadgesList.css'
-import twitterIcon from '../images/twitter-icon.png'
+import { Link } from 'react-router-dom';
+import '../pages/styles/BadgesList.css';
+import twitterIcon from '../images/twitter-icon.png';
 
 class BadgesList extends React.Component {
     render() {
+        if(this.props.badges.length === 0) {
+            return (
+                <div>
+                    <h3>No badges were found</h3>
+                    <Link className="btn btn-primary" to="/badges/new">
+                    Create new Badge
+                    </Link>
+                </div>
+            )
+        };
+
         return (
             <ul className="container">
             {this.props.badges.map((badge) => {
