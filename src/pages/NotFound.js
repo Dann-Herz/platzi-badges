@@ -12,7 +12,7 @@ function NotFound () {
                 <div className="background-message2">
                     <h1>Not Found 404</h1>
                     <p>It seems you are lost cowboy</p>
-                    <Link to="/badges/Main" className="btn btn-primary">Go back home?</Link>
+                    <Link to="/" className="btn btn-primary">Go back home?</Link>
                 </div>
                 <picture className="">
                     <img src={astronaut} className="size2" alt="" />

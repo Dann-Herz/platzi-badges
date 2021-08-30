@@ -2,6 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../pages/styles/BadgesList.css';
 import twitterIcon from '../images/twitter-icon.png';
+import Gravatar from './Gravatar';
+
+
+class BadgesListItem extends React.Component {
+    render () {
+        return (
+            <div className="container__list-styled" >
+                        <Gravatar className="container__list-styled__img" email={this.props.badge.email} alt="" />
+                        <div>
+                            <div className="bold">
+                                {this.props.badge.firstName} {this.props.badge.lastName}
+                            </div>
+                            <div className="container__list-styled__twitter">
+                                <img src={twitterIcon} className="container__list-styled__twitter__img" alt="" />
+                                @{this.props.badge.twitter} 
+                                
+                            </div>
+                            <div>
+                                {this.props.badge.jobTitle} 
+                            </div>
+                        </div>
+            </div>
+        )
+    }
+}
 
 class BadgesList extends React.Component {
     render() {
@@ -20,26 +45,17 @@ class BadgesList extends React.Component {
             <ul className="container">
             {this.props.badges.map((badge) => {
                 return (
-                    <li className="container__list-styled" key={badge.id}>
-                        <img className="container__list-styled__img" src={badge.avatarUrl} alt="" />
-                        <div>
-                            <div className="bold">
-                                {badge.firstName} {badge.lastName}
-                            </div>
-                            <div className="container__list-styled__twitter">
-                                <img src={twitterIcon} className="container__list-styled__twitter__img" alt="" />
-                                @{badge.twitter} 
-                                
-                            </div>
-                            <div>
-                                {badge.jobTitle} 
-                            </div>
-                        </div>
+                    <li className="container-li" key={badge.id}>
+                        <Link className="container-li-link" to={`./badges/${badge.id}`}>
+                            <BadgesListItem badge={badge} />
+                        </Link>
                     </li>
+
                 )
-            })}
+            })
+            }
         </ul>
-        );
+        )
     }
 }
 

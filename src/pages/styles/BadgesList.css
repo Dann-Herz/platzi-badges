@@ -8,6 +8,20 @@
     flex-direction: column;
 }
 
+.container-li::marker {
+    font-size: 0em;
+}
+
+.container-li-link {
+    color: rgb(41, 41, 41);
+    text-decoration: none;
+}
+
+.container-li-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
 .container__list-styled {
     display: grid;
     grid-template-columns: 100px calc(50vw - 100px);

@@ -4,9 +4,9 @@
       "id": "2de30c42-9deb-40fc-a41f-05e62b5939a7",
       "firstName": "Freda",
       "lastName": "Grady",
-      "email": "Leann_Berge@gmail.com",
+      "email": "Freda_Grady@gmail.com",
       "jobTitle": "Legacy Brand Director",
-      "twitter": "FredaGrady22221-7573",
+      "twitter": "FredaGrady-7573",
       "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
     },
     {
@@ -428,7 +428,7 @@
       "lastName": "Kaufman López",
       "email": "richardbkaufman@gmail.com",
       "avatarUrl": "https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon",
-      "jobTitle": "Frontend Engineer @ Kickass Partners",
+      "jobTitle": "Frontend Engineer",
       "twitter": "sparragus",
       "id": "EYR2BVQ"
     },
@@ -440,6 +440,50 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstname": "Pepe",
+      "lastName": "Kaufman",
+      "email": "pepeKaufman@gmail.com",
+      "jobTitle": "Desarrollador",
+      "twitter": "pepeKauf",
+      "id": "0s_ghGx"
+    },
+    {
+      "id": "ZGTjV9V",
+      "firstName": "Dann",
+      "lastName": "Herz",
+      "email": "danielhdzmzin@gmail.com",
+      "jobTitle": "Desarrollador",
+      "twitter": "Dnl_hdz",
+      "avatarUrl": "Dnl_hdz"
+    },
+    {
+      "id": "GM541sa",
+      "firstName": "Dann",
+      "lastName": "Herz",
+      "email": "danielhdzmzin@gmail.com",
+      "jobTitle": "React developer",
+      "twitter": "Dnl_hdz",
+      "avatarUrl": ""
+    },
+    {
+      "id": "HlJ5qZb",
+      "firstName": "Snoopy",
+      "lastName": "Kaufman",
+      "email": "Snoopy@example.com",
+      "jobTitle": "React developer",
+      "twitter": "SnoopyKauf",
+      "avatarUrl": ""
+    },
+    {
+      "id": "PU5sPTn",
+      "firstName": "Alonso",
+      "lastName": "Hernández",
+      "email": "osnolayos@gmail.com",
+      "jobTitle": "Desarrollador",
+      "twitter": "",
+      "avatarUrl": ""
     }
   ]
 }
