@@ -22,6 +22,18 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .BadgeDetails__Badge {
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+    width: 90vw;
+  }
+
+  .BadgeDetails__Badge-actions {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
   
   .BadgeDetails__buttons {
     display: flex;
