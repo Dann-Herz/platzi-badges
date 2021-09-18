@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import './styles/BadgeDetailsContainer.css';
@@ -6,10 +6,21 @@ import confLogo from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge';
 import DeleteBadgeModal from '../components/DeleteBadgeModal';
 
-function BadgeDetails (props) {
-  const [count, setCount] = React.useState(0);
 
-  const badge = props.badge;
+function useIncreaseCount(max) {
+    const [count, setCount] = React.useState(0)
+
+    if (count>max) {
+        setCount(0);
+    }
+
+    return [count, setCount];
+}
+
+function BadgeDetails (props) {
+  const [count, setCount] = useIncreaseCount(4);
+
+  const badge = props.badge;    
   return (
         <div>
         <div className="BadgeDetails__hero">

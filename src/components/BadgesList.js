@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../pages/styles/BadgesList.css';
 import twitterIcon from '../images/twitter-icon.png';
@@ -28,9 +28,42 @@ class BadgesListItem extends React.Component {
     }
 }
 
-class BadgesList extends React.Component {
-    render() {
-        if(this.props.badges.length === 0) {
+function BadgesList(props) {
+    const badges = props.badges;
+
+    const [query, setQuery] = React.useState('');
+    // function algo(query) {
+    //     console.log(query);
+    // }
+    // algo(query);
+
+    var entradasInvalidas = 0;
+
+    function filtrarPorID(obj) {
+        if ('firstName' in obj && typeof(obj.firstName) === 'string' && isNaN(obj.id) && obj.firstName == query) {
+          return true;
+        } else {
+          entradasInvalidas++;
+          return false;
+        }
+      }
+
+    var filteredBadges = badges.filter(filtrarPorID);
+
+    console.log('Array Filtrado\n', filteredBadges);
+
+    // const filteredBadges = setTimeout(() => {
+    //     // badges.filter(badge => {
+    //     //     return badge.firstName.includes(query);
+    //     // });
+    //     // console.log(badges[]firstName);
+    // }, 5000);
+
+        // const filteredBadges =  badges.filter(badge => {
+        //     return badge.firstName.includes(query);
+        // });
+    
+        if(filteredBadges.length === 0) {
             return (
                 <div>
                     <h3>No badges were found</h3>
@@ -42,21 +75,35 @@ class BadgesList extends React.Component {
         };
 
         return (
-            <ul className="container">
-            {this.props.badges.map((badge) => {
-                return (
-                    <li className="container-li" key={badge.id}>
-                        <Link className="container-li-link" to={`./badges/${badge.id}`}>
-                            <BadgesListItem badge={badge} />
-                        </Link>
-                    </li>
+            <div>
+                <div className="form-group">
+                    <label>Filter Badges</label>
+                    <input 
+                    type="text" 
+                    className="form-control"
+                    value={query}
+                    onChange={e => {
+                        setQuery(e.target.value)
+                    }}
+                    />
+                </div>
+                <ul className="container">
+                    {filteredBadges.map((badge) => {
+                        return (
+                            <li className="container-li" key={badge.id}>
+                                <Link className="container-li-link" to={`./badges/${badge.id}`}>
+                                    <BadgesListItem badge={badge} />
+                                </Link>
+                            </li>
 
-                )
-            })
-            }
-        </ul>
+                        )
+                    })
+                    }
+                </ul>
+            </div>
+
         )
-    }
+    
 }
 
 export default BadgesList;
